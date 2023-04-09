@@ -89,10 +89,6 @@ body {
   height: 100%;
   background-color: var(--white);
 }
-
-/* @keyframes anim1 {
-  0%{}
-} */
 .icon:hover {
   cursor: pointer;
   transform: scale(0.9);
@@ -174,13 +170,17 @@ body {
   cursor: pointer;
   margin: auto;
   width: 98%;
-  height: 8rem;
+  height: 5rem;
   background-color: var(--pink);
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 2rem;
   border-radius: 5px;
-  padding: 1rem;
+  padding: .5rem;
+}
+.myNewDiv::after {
+  content: "...";
 }
 .myNewDiv .tittle{
   font-weight: bold;
@@ -192,4 +192,7 @@ body {
 h3{
   padding: .5rem;
   margin-bottom: .5rem;
+}
+#status .notes h1{
+    color: var(--blue1);
 }

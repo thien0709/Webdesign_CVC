@@ -2,6 +2,14 @@
 function handleInput(event) {
   console.log(event.target.innerHTML);
 }
+const removeText = document.querySelectorAll(".myNewDiv");
+const noteStatus = document.querySelector("#content #status .notes h1");
+if(!removeText.length){
+  noteStatus.innerHTML = "Don't havae note";
+}
+else {
+  noteStatus.style.display = "none"
+}
 //Hello user
 const userName = document.querySelector("#navbar .user .logo h4");
 let n = JSON.parse(localStorage.getItem("user"));
@@ -22,6 +30,7 @@ const notes = document.querySelector("#content #status .notes");
 const tittle = document.querySelector("#note .head h3");
 let userTexts = [];
 notiCre.addEventListener("click", function () {
+  noteStatus.style.display = "none";
   //Lay thoi gian
 var now = new Date();
 var hours = now.getHours();
@@ -39,7 +48,7 @@ var time = `Create at ${hours} : ${minutes} : ${seconds} by ${n.username}`;
   const x = JSON.parse(localStorage.getItem("userTexts"));
   //Create by 
 const creatBy = document.querySelector("#note .head .name h5");
-creatBy.innerHTML =time ;
+creatBy.innerHTML = time ;
 
   //Tao phan tu su dung innerHTML
   for (let i = 0; i < x.length; i++) {
