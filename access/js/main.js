@@ -22,14 +22,25 @@ const notes = document.querySelector("#content #status .notes");
 const tittle = document.querySelector("#note .head h3");
 let userTexts = [];
 notiCre.addEventListener("click", function () {
+  //Lay thoi gian
+var now = new Date();
+var hours = now.getHours();
+var minutes = now.getMinutes();
+var seconds = now.getMilliseconds();
+var time = `Create at ${hours} : ${minutes} : ${seconds} by ${n.username}`;
   //Them content va user vao mang
   let userText = {
     author: n.username,
     content: text.textContent,
+    createAt: time,
   };
   userTexts.push(userText);
   localStorage.setItem("userTexts", JSON.stringify(userTexts));
   const x = JSON.parse(localStorage.getItem("userTexts"));
+  //Create by 
+const creatBy = document.querySelector("#note .head .name h5");
+creatBy.innerHTML =time ;
+
   //Tao phan tu su dung innerHTML
   for (let i = 0; i < x.length; i++) {
     var newElement = `<div class="myNewDiv"> <div class="tittle">
@@ -44,6 +55,7 @@ for (let i = 0; i < removeText.length; i++) {
   removeText[i].addEventListener("click", function () {
     notiDel.style.display = "flex";
     notiCre.style.display = "none";
+    creatBy.innerHTML =x[i].createAt;
     notiDel.addEventListener("click",function(){
       removeText[i].remove();
     return;
@@ -52,6 +64,3 @@ for (let i = 0; i < removeText.length; i++) {
   });
 }
 });
-
-//Create by 
-
