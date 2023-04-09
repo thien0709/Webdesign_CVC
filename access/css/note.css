@@ -152,11 +152,19 @@ body {
 .myNewDiv{
   cursor: pointer;
   margin: auto;
-  width: 90%;
-  height: 5rem;
+  width: 98%;
+  height: 8rem;
   background-color: var(--pink);
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 2rem;
   border-radius: 5px;
+  padding: .5rem;
+}
+.myNewDiv .tittle{
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.myNewDiv .content{
+  font-size: .8rem;
 }
