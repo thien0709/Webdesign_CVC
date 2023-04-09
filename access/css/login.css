@@ -90,6 +90,7 @@ input:not(:placeholder-shown) + label {
   margin: auto;
   font-family: "Courier New", Courier, monospace;
   cursor: pointer;
+  padding: .5rem;
 }
  button a{
   padding: 0 1rem;
