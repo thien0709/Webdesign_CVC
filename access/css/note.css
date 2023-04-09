@@ -89,13 +89,17 @@ body {
   height: 100%;
   background-color: var(--white);
 }
+
+/* @keyframes anim1 {
+  0%{}
+} */
 .icon:hover {
   cursor: pointer;
   transform: scale(0.9);
   transition: linear 0.3s;
 }
 .icon:hover i {
-  animation: anim 2s infinite;
+  animation: anim 1s backwards;
 }
 @keyframes anim {
   0% {
@@ -132,8 +136,8 @@ body {
   width: 70rem;
   height: 5rem;
   padding: 1rem;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 #note .comment{
   width: 10rem;
@@ -176,7 +180,7 @@ body {
   text-overflow: ellipsis;
   margin-bottom: 2rem;
   border-radius: 5px;
-  padding: .5rem;
+  padding: 1rem;
 }
 .myNewDiv .tittle{
   font-weight: bold;
