@@ -64,3 +64,12 @@ for (let i = 0; i < removeText.length; i++) {
   });
 }
 });
+const bug = document.querySelector("#note .comment");
+const error = document.querySelector("#note .a");
+bug.addEventListener("click",function(){
+  error.style.display = "block";
+  error.innerHTML = "Tính năng đang phát triển quay lại sau";
+  setTimeout(() => {
+    error.style.display = "none";
+  }, 2000);
+})
